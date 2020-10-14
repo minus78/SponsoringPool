@@ -31,3 +31,4 @@ def findUSDLock2(w3, addr):
 
         print(USDLock)
         print(AContract.functions.getRedirectedBalance(RedirectAddr).call()*1.0/10**d)
+        return AddrActiveRedirect

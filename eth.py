@@ -6,7 +6,7 @@ import matplotlib.dates as mdates
 from matplotlib.dates import MO, TU, WE, TH, FR, SA, SU
 import numpy as np
 
-ProviderAddr = 'wss://mainnet.infura.io/ws/v3/aaaaaaaaaaaaaaaaaaa'
+ProviderAddr = 'wss://mainnet.infura.io/ws/v3/aaaaaaaaaaaa'
 w3 = Web3(Web3.WebsocketProvider(ProviderAddr))
 
 # contract
@@ -20,35 +20,36 @@ totalUSD = 0
 
 
 print("== DAI ==")
-USDLock, dateTab1, USDTab1 = findUSDLock(w3, aDaiAddr)
-print(USDLock)
+USDLock1, dateTab1, USDTab1 = findUSDLock(w3, aDaiAddr)
+print(USDLock1)
 findUSDLock2(w3, aDaiAddr)
 
 print("== BUSD ==")
-USDLock, dateTab2, USDTab2 = findUSDLock(w3, aBusdAddr)
-print(USDLock)
+USDLock2, dateTab2, USDTab2 = findUSDLock(w3, aBusdAddr)
+print(USDLock2)
 findUSDLock2(w3, aBusdAddr)
 
 print("== USDC ==")
-USDLock, dateTab3, USDTab3 = findUSDLock(w3, aUSDCAddr)
-print(USDLock)
+USDLock3, dateTab3, USDTab3 = findUSDLock(w3, aUSDCAddr)
+print(USDLock3)
 findUSDLock2(w3, aUSDCAddr)
 
 print("== USDT ==")
-USDLock, dateTab4, USDTab4 = findUSDLock(w3, aUSDTAddr)
-print(USDLock)
+USDLock4, dateTab4, USDTab4 = findUSDLock(w3, aUSDTAddr)
+print(USDLock4)
 findUSDLock2(w3, aUSDTAddr)
 
 print("== TUSD ==")
-USDLock, dateTab5, USDTab5 = findUSDLock(w3, aTUSDAddr)
-print(USDLock)
+USDLock5, dateTab5, USDTab5 = findUSDLock(w3, aTUSDAddr)
+print(USDLock5)
 findUSDLock2(w3, aTUSDAddr)
 
 print("== SUSD ==")
-USDLock, dateTab6, USDTab6 = findUSDLock(w3, asUSDAddr)
-print(USDLock)
+USDLock6, dateTab6, USDTab6 = findUSDLock(w3, asUSDAddr)
+print(USDLock6)
 findUSDLock2(w3, asUSDAddr)
 
+print("total: {}$".format(USDLock1+ USDLock2 + USDLock3 + USDLock4 + USDLock5 + USDLock6))
 print("== Graph ==")
 
 fig, ax = plt.subplots()
